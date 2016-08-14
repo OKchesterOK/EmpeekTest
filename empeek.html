@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="empeekApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Empeek</title>
+		<link rel="stylesheet" type="text/css" href="empeek.css">
+		<script type="text/javascript" src="js/angular.min.js"></script>
+    	<script type="text/javascript" src="empeek.js"></script>
+	</head>
+	<body ng-controller="empeekController">
+		<div class="layout">
+			<div class="sidebar">
+				<h1>Main</h1>
+				<nav>
+					<ul>
+						<li>
+							<a href="empeek.html">Overview</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="content">
+				<div class="items">
+					<h1>Items</h1>
+					<form ng-submit="addItem()">
+						<input type="text" class="add-name" placeholder="Type name here..." ng-model="itemName" />
+						<input type="submit" class="add-button" value="Add new" />
+					</form>
+					<div class="active-item"></div>
+					<div class="items-list" ng-repeat="item in items track by $index"  ng-class="{ active: item.isActive }">
+						<div ng-click="clickItem(item)">
+							{{item.name}}
+							<div class="comment-counter">
+								{{item.comments.length}}
+							</div>
+						</div>
+						<div class="del-button" ng-click="removeItem(item)">
+							Delete
+						</div>
+					</div>
+				</div>
+				<div class="comments-list">
+					<h1>Comments #{{commentIndex+1}}</h1>
+					<div class="comment" ng-repeat="comment in arr track by $index">
+						<div class="img"></div>
+						<div class="comment-text">
+							{{comment}}
+						</div>
+					</div>
+					<div class="new-comment">
+						<div class="img" ng-submit="addBoxColor()"></div>
+						<form class="comments-input" ng-submit="addComments()">
+                             <input type="text" ng-model="text" name="text" autocomplete="off" />
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
