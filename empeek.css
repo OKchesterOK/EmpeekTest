@@ -128,7 +128,7 @@ input[type="text"]:-ms-input-placeholder      {font-family: Sans; font-size: 16p
 .items-list {
 	height: 50px;
 	line-height: 40px;
-	margin: 0 10px 0 5px;
+	margin: 0 15px 0 5px;
 	padding: 5px 0;
 	border-bottom: 1px solid #D8D8D8;
 	cursor: pointer;
