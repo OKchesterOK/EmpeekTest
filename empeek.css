@@ -330,7 +330,7 @@ input[type="text"]:-ms-input-placeholder      {font-family: Sans; font-size: 16p
 	.comment-text {
 		margin-left: 15px;
 		font-size: 10px;
-		width: 375px;
+		width: 290px;
 	}
 
 	.comment .img, .new-comment .img {
@@ -349,7 +349,7 @@ input[type="text"]:-ms-input-placeholder      {font-family: Sans; font-size: 16p
 
 	.comments-input input {
 		height: 80px;
-		width: 375px;
+		width: 290px;
 	}
 }
 
