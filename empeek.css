@@ -311,7 +311,7 @@ input[type="text"]:-ms-input-placeholder      {font-family: Sans; font-size: 16p
 	.add-name {
 		margin-top: 10px;
 		height: 35px;
-		width: 345px;
+		width: 255px;
 		line-height: 35px;
 	}
 	.comment-counter {
